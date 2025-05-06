@@ -1,0 +1,38 @@
+#include<stdio.h>
+
+struct student
+{
+    char name[20];
+    int age;
+    float cgpa;
+};
+
+union u
+{
+    int a;
+    char b;
+};
+
+
+int main(){
+    struct student Mehedi;
+
+    scanf("%[^\n]s", Mehedi.name);
+    scanf("%d", &Mehedi.age);
+    scanf("%f", &Mehedi.cgpa);
+
+    printf("%s\n", Mehedi.name);
+    printf("%d\n", Mehedi.age);
+    printf("%f", Mehedi.cgpa);
+
+    union u x;
+
+    x.a = 10;
+    printf("%d\n", x.a);
+    
+    x.b = 'a';
+    printf("%c\n", x.b);
+    printf("%d\n", x.a);
+
+    return 0;
+}
